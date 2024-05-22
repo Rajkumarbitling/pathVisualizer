@@ -1,0 +1,139 @@
+.customButtonContainer {
+  padding: 10px;
+  position: relative;
+  width: 146px;
+  height: 38px;
+}
+
+.wrapper{
+  z-index: 20;
+  position: absolute;
+  cursor: pointer;
+  font-size: 14px;
+  top: 0;
+  box-shadow: 0px 0px 0px 3px var(--darkOrange) inset;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.algoList{
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  transition: all .5s;
+}
+
+.algoItem:not(:last-child){
+  position: relative;
+  height: 32px;
+  border-bottom: 3px solid var(--darkOrange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.roundedStylesSpan1{
+  display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: var(--darkOrange);
+    left: 0;
+    position: absolute;
+    bottom: -6px;
+}
+
+.roundedStylesSpan2{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: white;
+  position: absolute;
+  left: 3px;
+  bottom: 0;
+  border-radius: 50% 50% 0;
+}
+
+.roundedStylesSpan3{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: white;
+  position: absolute;
+  left: 3px;
+  bottom: -13px;
+  border-radius: 50% 0% 0;
+}
+
+.roundedStylesSpan4{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: var(--darkOrange);
+  right: 0;
+  position: absolute;
+  bottom: -6px;
+}
+.roundedStylesSpan5{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: white;
+  position: absolute;
+  right: 3.5px;
+  bottom: 0px;
+  border-radius: 0 50% 50% 0;
+}
+.roundedStylesSpan6{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: white;
+  position: absolute;
+  right: 3.5px;
+  bottom: -13px;
+  border-radius: 0 50% 50% 0;
+}
+
+
+.increaseHeight{
+  height: 120px;
+}
+
+.customButtonContainer .custombutton {
+  z-index: 20;
+  min-width: 136px;
+  width: max-content;
+  position: relative;
+  background: none;
+  font-weight: 600;
+  background: linear-gradient(white, white) padding-box,
+    var(--gradient) border-box;
+  border-radius: 30px;
+  padding: 4px 20px;
+  border: 3px solid transparent;
+  color: var(--black);
+}
+
+.customButtonContainer .custombutton::before {
+  content: "";
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background: var(--gradient);
+  z-index: 1;
+  transition: all 0.3s;
+}
+
+.custombutton:hover::before {
+  content: attr(data-content);
+  color: white;
+  opacity: 1;
+  width: 100%;
+}
