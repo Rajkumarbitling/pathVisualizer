@@ -31,6 +31,7 @@ const updateUnvisitedNodeNeighbor = (
   for (let neighbor of neighbors) {
     if (!neighbor.isVisited && !neighbor.isWall){
         updateUnvisitedNodeNeighbor(neighbor, grid, visitedNodesInOrder, dest);
+        neighbor.prevNode = curNode
     }
   }
 };

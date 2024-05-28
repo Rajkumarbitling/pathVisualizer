@@ -20,8 +20,8 @@ export const findThePathFromStartToFinish = (
     visitedNodesInOrder = dfs(grid, startNode, finishNode);
   }
 
-  if(algorithm !== 'dfs'){
+  // if(algorithm !== 'dfs'){
     nodesInShortestPathOrder = getNodesInShortestPathOrder(finishNode);
-  }
+  // }
   return { visitedNodesInOrder, nodesInShortestPathOrder };
 };
