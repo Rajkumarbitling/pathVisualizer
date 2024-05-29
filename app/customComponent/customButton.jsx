@@ -7,8 +7,8 @@ const algorithmOptions = [
   { label: "Dijkstra", value: "dijkstra" },
   { label: "A-star", value: "astar" },
   { label: "A-star on steriod", value: "astar_on_steriod" },
-  { label: "DFS", value: "dfs" },
   { label: "BFS", value: "bfs" },
+  { label: "DFS", value: "dfs" },
 ];
 
 const CustomButton = ({
