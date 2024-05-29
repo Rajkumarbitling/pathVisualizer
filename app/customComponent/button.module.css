@@ -17,10 +17,10 @@
 }
 
 .algoList{
-  height: 0;
+  max-height: 0;
   padding: 0;
   overflow: hidden;
-  transition: all .5s;
+  transition: max-height .5s ease-out;
 }
 
 .algoItem:not(:last-child){
@@ -96,7 +96,8 @@
 
 
 .increaseHeight{
-  height: 120px;
+  max-height: 500px;
+  transition: max-height .5s ease-in;
 }
 
 .customButtonContainer .custombutton {

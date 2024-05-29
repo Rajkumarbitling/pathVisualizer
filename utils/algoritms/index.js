@@ -1,4 +1,5 @@
 import { astar } from "./astar";
+import { bfs } from "./bfs";
 import { dfs } from "./dfs";
 import { dijkstra, getNodesInShortestPathOrder } from "./dijkstra";
 
@@ -18,6 +19,8 @@ export const findThePathFromStartToFinish = (
     visitedNodesInOrder = astar(grid, startNode, finishNode, 7);
   } else if(algorithm === 'dfs'){
     visitedNodesInOrder = dfs(grid, startNode, finishNode);
+  } else if(algorithm === 'bfs'){
+    visitedNodesInOrder = bfs(grid, startNode, finishNode);
   }
 
   // if(algorithm !== 'dfs'){
